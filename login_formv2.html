@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS validation</title>
+    <link rel="stylesheet" href="css/validation.css">
+</head>
+<body>
+    <h1>Create a user account</h1>
+
+    <form action="" id="form" novalidate>
+
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required minlength="2">
+        </div>        
+
+        <br>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="one letter one number eight total" required>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Create">
+
+    </form>
+
+    <br>
+
+    <div id="errors"></div>
+
+    <!-- tweede versie: controle in script zelf doen, eigen foutboodschappen onderaan plaatsen -->
+    <script src="scripts/loginv2.js"></script>
+
+</body>
+</html>
